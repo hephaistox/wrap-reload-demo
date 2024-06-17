@@ -1,6 +1,6 @@
 # ring-app
 
-Based on example of ring code in We page 37, this repo demonstrates how aliased namespace litteral maps are messing up `ring/wrap-reload`.
+Based on example of ring code in "Web Development with Clojure Third Edition", as in page 37, this repo demonstrates how aliased namespace litteral maps are messing up `ring/wrap-reload`.
 
 When the error is demonstrated the code does not pass wrap-reload, 
 
@@ -23,4 +23,4 @@ Full report at:
 
 File [clojure-13192220538057578899.edn](clojure-13192220538057578899.edn) is included in the repo
 
-* Note that commenting `without-as-alias` is done in branch fixed and it removes the circular dependency.
+* Branch `without-as-alias` has removed the as-alias and then circular dependency.
