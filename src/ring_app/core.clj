@@ -8,7 +8,7 @@
   (response/response
    (str "<html><body> your IP is:  "
         (:remote-addr request-map)
-        (pr-str (ext/I-dont-do-too-much 12))
+       ;; (pr-str (ext/I-dont-do-too-much 12))
         (pr-str (ext/I-dont-do-too-much-but-I-doitwell 12))
         "</body></html>")))
 
