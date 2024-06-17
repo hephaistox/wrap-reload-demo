@@ -1,0 +1,101 @@
+{:clojure.main/message
+ "Execution error (AssertionError) at ns-tracker.dependency/depend (dependency.clj:56).\nAssert failed: circular dependency\n(not (depends? graph dep x))\n",
+ :clojure.main/triage
+ {:clojure.error/class java.lang.AssertionError,
+  :clojure.error/line 56,
+  :clojure.error/cause
+  "Assert failed: circular dependency\n(not (depends? graph dep x))",
+  :clojure.error/symbol ns-tracker.dependency/depend,
+  :clojure.error/source "dependency.clj",
+  :clojure.error/phase :execution},
+ :clojure.main/trace
+ {:via
+  [{:type clojure.lang.Compiler$CompilerException,
+    :message
+    "Syntax error macroexpanding at (/private/var/folders/fz/zf0944w113b5pj984_ywtb1m0000gn/T/form-init960064764467256813.clj:1:124).",
+    :data
+    {:clojure.error/phase :execution,
+     :clojure.error/line 1,
+     :clojure.error/column 124,
+     :clojure.error/source
+     "/private/var/folders/fz/zf0944w113b5pj984_ywtb1m0000gn/T/form-init960064764467256813.clj"},
+    :at [clojure.lang.Compiler load "Compiler.java" 7665]}
+   {:type java.lang.AssertionError,
+    :message
+    "Assert failed: circular dependency\n(not (depends? graph dep x))",
+    :at
+    [ns_tracker.dependency$depend invokeStatic "dependency.clj" 56]}],
+  :trace
+  [[ns_tracker.dependency$depend invokeStatic "dependency.clj" 56]
+   [ns_tracker.dependency$depend invoke "dependency.clj" 51]
+   [ns_tracker.dependency$depend$fn__1092 invoke "dependency.clj" 62]
+   [clojure.core.protocols$naive_seq_reduce
+    invokeStatic
+    "protocols.clj"
+    62]
+   [clojure.core.protocols$interface_or_naive_reduce
+    invokeStatic
+    "protocols.clj"
+    72]
+   [clojure.core.protocols$fn__8249 invokeStatic "protocols.clj" 169]
+   [clojure.core.protocols$fn__8249 invoke "protocols.clj" 124]
+   [clojure.core.protocols$fn__8204$G__8199__8213
+    invoke
+    "protocols.clj"
+    19]
+   [clojure.core.protocols$seq_reduce invokeStatic "protocols.clj" 31]
+   [clojure.core.protocols$fn__8234 invokeStatic "protocols.clj" 75]
+   [clojure.core.protocols$fn__8234 invoke "protocols.clj" 75]
+   [clojure.core.protocols$fn__8178$G__8173__8191
+    invoke
+    "protocols.clj"
+    13]
+   [clojure.core$reduce invokeStatic "core.clj" 6887]
+   [clojure.core$reduce invoke "core.clj" 6869]
+   [ns_tracker.dependency$depend invokeStatic "dependency.clj" 62]
+   [ns_tracker.dependency$depend doInvoke "dependency.clj" 51]
+   [clojure.lang.RestFn applyTo "RestFn.java" 146]
+   [clojure.core$apply invokeStatic "core.clj" 671]
+   [clojure.core$apply invoke "core.clj" 662]
+   [ns_tracker.core$add_to_dep_graph$fn__1217 invoke "core.clj" 65]
+   [clojure.lang.PersistentVector reduce "PersistentVector.java" 343]
+   [clojure.core$reduce invokeStatic "core.clj" 6886]
+   [clojure.core$reduce invoke "core.clj" 6869]
+   [ns_tracker.core$add_to_dep_graph invokeStatic "core.clj" 62]
+   [ns_tracker.core$add_to_dep_graph invoke "core.clj" 61]
+   [ns_tracker.core$update_dependency_graph invokeStatic "core.clj" 74]
+   [ns_tracker.core$update_dependency_graph invoke "core.clj" 71]
+   [ns_tracker.core$ns_tracker invokeStatic "core.clj" 102]
+   [ns_tracker.core$ns_tracker invoke "core.clj" 91]
+   [ns_tracker.core$ns_tracker invokeStatic "core.clj" 96]
+   [ns_tracker.core$ns_tracker invoke "core.clj" 91]
+   [ring.middleware.reload$reloader invokeStatic "reload.clj" 8]
+   [ring.middleware.reload$reloader invoke "reload.clj" 7]
+   [ring.middleware.reload$wrap_reload invokeStatic "reload.clj" 34]
+   [ring.middleware.reload$wrap_reload invoke "reload.clj" 21]
+   [ring.middleware.reload$wrap_reload invokeStatic "reload.clj" 32]
+   [ring.middleware.reload$wrap_reload invoke "reload.clj" 21]
+   [ring_app.core$_main invokeStatic "core.clj" 18]
+   [ring_app.core$_main invoke "core.clj" 15]
+   [clojure.lang.Var invoke "Var.java" 380]
+   [user$eval140 invokeStatic "form-init960064764467256813.clj" 1]
+   [user$eval140 invoke "form-init960064764467256813.clj" 1]
+   [clojure.lang.Compiler eval "Compiler.java" 7194]
+   [clojure.lang.Compiler eval "Compiler.java" 7184]
+   [clojure.lang.Compiler load "Compiler.java" 7653]
+   [clojure.lang.Compiler loadFile "Compiler.java" 7591]
+   [clojure.main$load_script invokeStatic "main.clj" 475]
+   [clojure.main$init_opt invokeStatic "main.clj" 477]
+   [clojure.main$init_opt invoke "main.clj" 477]
+   [clojure.main$initialize invokeStatic "main.clj" 508]
+   [clojure.main$null_opt invokeStatic "main.clj" 542]
+   [clojure.main$null_opt invoke "main.clj" 539]
+   [clojure.main$main invokeStatic "main.clj" 664]
+   [clojure.main$main doInvoke "main.clj" 616]
+   [clojure.lang.RestFn applyTo "RestFn.java" 137]
+   [clojure.lang.Var applyTo "Var.java" 705]
+   [clojure.main main "main.java" 40]],
+  :cause
+  "Assert failed: circular dependency\n(not (depends? graph dep x))",
+  :phase :execution}}
+
